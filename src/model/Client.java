@@ -3,10 +3,12 @@ package model;
 public class Client {
     private String name;
     private String cpf;
+    private Cart cart;
 
     public Client(String name, String cpf) {
         this.name = name;
         this.cpf = cpf;
+        this.cart = Cart.getInstance();
     }
 
     public String getName() {
