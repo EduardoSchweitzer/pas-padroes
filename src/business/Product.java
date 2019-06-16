@@ -1,4 +1,4 @@
-package model;
+package business;
 
 public class Product {
     private String description;

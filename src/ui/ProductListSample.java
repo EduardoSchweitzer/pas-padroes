@@ -1,6 +1,6 @@
-package view;
+package ui;
 
-import model.Product;
+import business.Product;
 
 import java.util.ArrayList;
 
