@@ -2,32 +2,20 @@ package view;
 
 import java.util.ArrayList;
 
-import javax.swing.JFrame;
-import javax.swing.JScrollPane;
-import javax.swing.JTextArea;
+import javax.swing.*;
 
 import model.Product;
 
-public class ProductListDecorator extends JFrame{
+public class ProductListDecorator extends JList {
 	
-	private ArrayList<Product> list;
+	private ArrayList<String> list;
 	private JTextArea text;
 	
-	public ProductListDecorator(ArrayList<Product> list) {
-		super("Produtos");
+	public ProductListDecorator(ArrayList<String> list) {
+		super(list.toArray());
 		this.list = list;
 		this.text = new JTextArea();
-		fill();
-		JScrollPane rollPanel = new JScrollPane(text);
-		getContentPane().add(rollPanel);
 		setBounds(20,20,200,100);
-	}
-	
-	private void fill() {
-		for(Product p : list) {
-			text.append(p.getDescription() + "\r\n");
-		}
-		
 	}
 
 }
